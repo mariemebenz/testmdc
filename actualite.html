@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+    
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0 , maximum-scale=1.0 , user-scalablable=no ">
+    <title>Datacenter</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="file:///E:/fontawesome/css/all.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
+
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header class="colocation-header">
+        <a href="index.html" class="logo">MDC</a>
+        <div class="navigation">
+            <ul class="menu">
+                <div class="close-btn">
+
+                </div>
+
+
+
+                <li class="menu-item">
+                    <a href="index.html">Accueil</a>
+                </li>
+                <li class="menu-item">
+                    <a class="sub-btn active"  href="about.html">A propos  <i class="fas fa-caret-down"></i>
+                    </a>
+                   
+                </li>
+                <li class="menu-item">
+                    <a class="sub-btn" href="avantage.html">Criteres <i class="fas fa-caret-down"></i>
+                  </a>
+                    
+                  
+                </li>
+                <li class="menu-item">
+                    <a class="sub-btn" href="#">Services <i class="fas fa-caret-down"></i>
+                    </a>
+                    <ul class="sub-menu">
+                        <li class="sub-item">
+                            <a href="services.html">Colocation</a>
+                        </li>  
+                        <li class="sub-item">
+                            <a href="hebergement.html">Hébergement</a>
+                        </li>  
+   
+                        <li class="sub-item">
+                            <a href="cloud.html">Cloud</a>
+                        </li>
+                        <li class="sub-item">
+                            <a href="serveurs.html">serveurs dédiés</a>
+                        </li>
+                        <li class="sub-item">
+                            <a href="disaster-recovery.html">Disaster recovery</a>
+                        </li>
+                    </ul>
+                
+                </li>
+                <li class="menu-item">
+                    <a href="actualite.html">Actualités</a>
+                </li>
+                <li class="menu-item">
+                    <a href="contact.html">Contact</a>
+                </li>
+
+            </ul>
+        </div>
+<div class="menu-btn"></div>
+
+</header>
+
+
+
+
+
+<section id="about-home" class="hero3">
+    <h1>Actualités</h1>
+    <h2> Découvrir Maroc Datacenter</h2>
+    <p> Fondé en 2017 pour révolutionner l'industrie des centres de données au Maroc.</p>
+
+</section>
+
+    <section id="blog">
+        <div class="blog-heading">
+            <span>Découvrez les actualités de Maroc Datacenter.</span>
+            <div class="line-actualite-content"></div>
+            <h3> Restez informés de toutes les actualités et nouveautés de Maroc Datacenter.</h3>
+    
+        </div>
+        <!--blog-container-->
+        <div class="blog-container">
+
+          <div class="blog-box">
+
+            <div class="blog-img">
+                <img src="image/local_mdc3.png" alt="Blog">
+            </div>
+
+            <div class="blog-text" class="gradient-border" id="box">
+                <span> 19 Sept 2017 / Auteur : LE DESK </span>
+                <a href="#" class="blog-title"> La 1ère plate-forme de cloud computing </a>
+                <p>la première plate-forme Cloud Computing en Afrique francophone construite sur un site 100 pc marocain, a été inauguré mardi à Temara.</p>
+                <a href="#" > Lire la suite </a>
+            </div>
+          </div>
+
+          <div class="blog-box">
+
+            <div class="blog-img">
+                <img src="image/le360.jpg" alt="Blog">
+            </div>
+
+            <div class="blog-text">
+                <span> 19 july 2017 / Le 360 </span>
+                <a href="#" class="blog-title"> Inauguration à Témara d'un premier Maroc Datacenter</a>
+                <p>Moulay Hafid Elalamy, ministre de l'Industrie, du commerce, de l'investissement et de l'économique, présidera ce mardi 19 septembre à Témara la cérémonie d'inauguration de "Maroc Datacenter", le 1er centre de ce type à 100% marocain conçu selon la norme TIERIII. </p>
+                <a href="#" > Lire la suite</a>
+            </div>
+          </div>
+        </div>
+    </section>
+
+      <script src="main.js"></script>
+
+
+
+   
+      <script type="text/javascript">
+  
+
+        $(document).ready(function(){
+           //toggle sub-menu
+           $(".sub-btn").click(function(){
+               $(this).next(".sub-menu").slideToggle();
+           });
+       
+           //js for menu btn
+       
+        $(".more-btn").click(function(){
+           $(this).next(".more-menu").slideToggle();
+           
+        });
+       
+        //js for the responsive nav menu
+        var menu = document.querySelector(".menu");
+        var menuBtn = document.querySelector(".menu-btn");
+        var closeBtn = document.querySelector(".close-btn");
+       
+        menuBtn.addEventListener("click", () => {
+           menu.classList.add("active");
+        });
+       
+        closeBtn.addEventListener("click",() =>{
+           menu.classList.remove("active");
+        });
+       
+        window.addEventListener('scroll',function(){
+           var header =document.querySelector("header");
+           header.classList.toggle("sticky",window.scrolly > 0);
+        })
+         
+         
+        });
+        
+       </script>
+
+    </body>
+    </html>

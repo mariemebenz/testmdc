@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+    
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Datacenter</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="file:///E:/fontawesome/css/all.css">
+
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    
+   
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+    
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    
+  <header class="colocation-header">
+    <a href="index.html" class="logo">MDC</a>
+        <div class="navigation">
+            <ul class="menu">
+                <div class="close-btn">
+
+                </div>
+
+
+
+                <li class="menu-item">
+                    <a href="index.html">Accueil</a>
+                </li>
+                <li class="menu-item">
+                    <a class="sub-btn active"  href="about.html">A propos  <i class="fas fa-caret-down"></i>
+                    </a>
+                   
+                </li>
+                <li class="menu-item">
+                    <a class="sub-btn" href="avantage.html">Criteres <i class="fas fa-caret-down"></i>
+                  </a>
+                    
+                  
+                </li>
+                <li class="menu-item">
+                    <a class="sub-btn" href="#">Services <i class="fas fa-caret-down"></i>
+                    </a>
+                    <ul class="sub-menu">
+                        <li class="sub-item">
+                            <a href="services.html">Colocation</a>
+                        </li>  
+                        <li class="sub-item">
+                            <a href="hebergement.html">Hébergement</a>
+                        </li>  
+   
+                        <li class="sub-item">
+                            <a href="cloud.html">Cloud</a>
+                        </li>
+                        <li class="sub-item">
+                            <a href="serveurs.html">serveurs dédiés</a>
+                        </li>
+                        <li class="sub-item">
+                            <a href="disaster-recovery.html">Disaster recovery</a>
+                        </li>
+                    </ul>
+                
+                </li>
+                <li class="menu-item">
+                    <a href="actualite.html">Actualités</a>
+                </li>
+                <li class="menu-item">
+                    <a href="contact.html">Contact</a>
+                </li>
+
+            </ul>
+        </div>
+<div class="menu-btn"></div>
+
+</header>
+
+    <section class="contact"> 
+        <div class="content">
+          <h2>Contactez-nous</h2>
+          <p> Envoyez-nous un message pour discuter de vos besoins spécifiques. Notre équipe d'experts est prête à vous aider à trouver la meilleure solution d'hébergement pour votre entreprise.</p>
+        </div>
+        <div class="container">
+          <div class="contactInfo">
+            <div class="box">
+        
+              <div class="icon">
+                
+                  <i class="fa fa-map-marker" aria-hidden="true"></i>
+              
+              </div>
+              <div class="text">
+                <h3>Adresse</h3>
+                <p>Lot N° 34,<br>Zone industrielle Attasnia, <br>Temara, Maroc</p>
+              </div>
+            </div>
+      
+            <div class="box">
+              <div class="icon">
+                <i class="fa fa-phone" aria-hidden="true"></i>
+              </div>
+              <div class="text">
+                <h3>Télephone</h3>
+                <p>+ 212 (0)5 30 10 50 50</p>
+              </div>
+            </div>
+      
+            <div class="box">
+              <div class="icon">
+                <i class="fa fa-envelope-o" aria-hidden="true"></i>
+              </div>
+              <div class="text">
+                <h3>Email</h3>
+                <p>contact@marocdatacenter.ma​</p>
+              </div>
+            </div>
+          </div>
+      
+          <div class="contactForm">
+            
+          <form action="mail.php" method="POST">
+              <label for="Name">Nom</label>
+              <input type="text" name="name" id="name">
+              <label for="phone">Numéro de télephone</label>
+              <input type="tel" name="phone" id="phone">
+
+              <label for="email">Email</label>
+              <input type="email" name="email" id="email">
+              <label for="subject">Objet</label>
+              <input type="text" name="subject" id="subject">
+              <label for="message">Message</label>
+              <textarea name="message" id="" cols="30" rows="3"></textarea>
+              <input type="submit" value="Envoyer">
+          </form>
+          </div>
+        </div>
+      </section>
+       
+
+    
+      <script src="main.js"></script>
+
+    
+
+
+      <script type="text/javascript">
+  
+
+        $(document).ready(function(){
+           //toggle sub-menu
+           $(".sub-btn").click(function(){
+               $(this).next(".sub-menu").slideToggle();
+           });
+       
+           //js for menu btn
+       
+        $(".more-btn").click(function(){
+           $(this).next(".more-menu").slideToggle();
+           
+        });
+       
+        //js for the responsive nav menu
+        var menu = document.querySelector(".menu");
+        var menuBtn = document.querySelector(".menu-btn");
+        var closeBtn = document.querySelector(".close-btn");
+       
+        menuBtn.addEventListener("click", () => {
+           menu.classList.add("active");
+        });
+       
+        closeBtn.addEventListener("click",() =>{
+           menu.classList.remove("active");
+        });
+       
+        window.addEventListener('scroll',function(){
+           var header =document.querySelector("header");
+           header.classList.toggle("sticky",window.scrolly > 0);
+        })
+         
+         
+        });
+        
+       </script>
+
+    </body>
+    </html>
